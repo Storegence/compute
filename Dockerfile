@@ -22,7 +22,6 @@ RUN a2enmod rewrite && \
 
 # setup composer
 RUN curl --silent --show-error https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-RUN composer install --ignore-platform-reqs --no-scripts --no-dev --no-plugins
 
 # expose port
 EXPOSE 80 443
