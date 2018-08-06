@@ -3,9 +3,7 @@ FROM php:apache
 # setup basics
 RUN apt update -yqq && \
     apt upgrade -yqq && \
-    apt install -yqq sudo unzip curl git nodejs libssl-dev pkg-config libicu-dev libmcrypt-dev libvpx-dev libjpeg-dev libpng-dev libxpm-dev zlib1g-dev libfreetype6-dev libxml2-dev libexpat1-dev libbz2-dev libgmp3-dev libldap2-dev unixodbc-dev libpq-dev libsqlite3-dev libaspell-dev libsnmp-dev libpcre3-dev libtidy-dev libcurl4-openssl-dev
-
-RUN useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo
+    apt install -yqq sudo unzip curl cron git zip unzip nodejs libssl-dev pkg-config libicu-dev libmcrypt-dev libvpx-dev libjpeg-dev libpng-dev libxpm-dev zlib1g-dev libfreetype6-dev libxml2-dev libexpat1-dev libbz2-dev libgmp3-dev libldap2-dev unixodbc-dev libpq-dev libsqlite3-dev libaspell-dev libsnmp-dev libpcre3-dev libtidy-dev libcurl4-openssl-dev
 
 # install php exts and apache mods
 RUN a2enmod rewrite && \
