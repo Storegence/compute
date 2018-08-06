@@ -23,7 +23,5 @@ RUN a2enmod rewrite && \
 # setup composer
 RUN curl --silent --show-error https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-RUN useradd -ms /bin/bash docker
-
 # expose port
 EXPOSE 80 443
