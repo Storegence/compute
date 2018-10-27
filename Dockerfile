@@ -18,7 +18,7 @@ RUN a2enmod rewrite && \
     pdo_pgsql \
     xmlrpc \
     zip \
-    json intl xml bz2 opcache
+    json intl xml bz2 opcache pcntl
 
 # setup composer
 RUN curl --silent --show-error https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
